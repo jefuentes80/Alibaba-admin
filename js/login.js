@@ -14,20 +14,28 @@
       indice [i][5], posición del correo electronico.
     - else: inda que el dato ingresado no existe en la base de datos.
 */
+
+/* Librería de componentes */
+export var section_administrador = document.getElementById("section-administrador");
+export var section_login = document.getElementById("section-login");
+
 // Librería de usuario
 import {user} from "./user.js";
+import { adminstrador } from "./administrador.js";
 
 // Función de verificación de credenciales
 export function login(username,password){
 
-    for(let i = 0; i<=6;i++){
-       
-        if(user[i][1] === username){
-            console.log("Acceso con nombre de usuario");
-        }else if(user[i][5] === username){
-            console.log("true email");
+    for(let i = 0; i<=7;i++){
+        if(username === user[i][1] || username === user[i][5]){
+            if(password === user[i][2]){
+                console.log("Ahora tienes acceso");
+                adminstrador();
+            }else{
+                console.log('Constraseña incorrecta');
+            }
         }else {
-            console.log("user false");
+            console.log("Usuario incorrecto");
         }
     }
 

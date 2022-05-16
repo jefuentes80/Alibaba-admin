@@ -9,6 +9,17 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Activador de elementos*/
+.activar-block {
+    display: block;
+}
+.activar-flex {
+    display: flex;
+}
+
+.desactivar {
+    display: none;
+}
 
 /*
     DOCUMENTACIÓN
