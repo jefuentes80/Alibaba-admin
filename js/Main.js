@@ -1,26 +1,29 @@
-/* Incio de  sesión*/
-/*let user = prompt("User: ");
-let password = prompt("Password: ");
 
-login(user,password);*/
+/* Librería de los programas */
+import {login} from "./login.js"
 
-/* Libreria temporal */
-import {user} from "./user.js";
 
-/* Algoritmo de inicio de sesión */
+/** 
+    RECUPERACIÓN DE DATOS
+    la función @recuperar_datos tiene las sigueintes funciones:
+    - Evitar que la página se recargue con preventDefault
+    - Recuperar el usuario ingresado en el input @username
+    - Recuperar la contraseña del input @password
+    - Ejecutar la función @login agregando como parámetros los datos
+      recuperados.
+    - La función es activada por el boton del formulario @login por
+      medio de un evento de tipo submit.
+*/
+function recuperar_datos(e) {
+    e.preventDefault(); //<-- Evita que el formulario se recargue
 
-let user_input = 'carol.campbell@aol.com';
-let pass = "1234";
+    var username = document.querySelector("#username").value;
+    var password = document.querySelector("#password").value;
 
-for(let i = 0; i<=6;i++){
-
-    /* Comprobación del username */
-    if(user[i][1] === user_input){
-        console.log("true username");
-    }else if(user[i][5] === user_input){
-        console.log("true email");
-    }else {
-        console.log("user false");
-    }
-
+    //Programa login
+    login(username,password);
 }
+
+// Acción del boton
+var bt_entrar = document.querySelector("#login");//<-- Instancia del formulario
+bt_entrar.addEventListener('submit',recuperar_datos); //<-- Evento

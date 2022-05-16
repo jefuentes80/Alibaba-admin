@@ -1,0 +1,93 @@
+.section-login{
+    /* aparence */
+    max-width:100rem;
+    height: 55rem;
+    border-radius: 0.3rem;
+
+    /* element position */
+    margin: auto;
+    margin-top: 5rem;
+
+    /* items position */
+    display: flex;
+}
+.section-login_banner {
+    /* aparence */
+    max-width: 50rem;
+    height: 100%;
+}
+.section-login_banner img {
+    /* aparence */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FORMULARIO */
+.form-login {
+    /* aparence */
+    width: 100%;
+
+    /* items position */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login h2 {
+    /* aparence */
+    font-size: 3rem;
+
+    /* items position */
+    padding: 0;
+    margin: 0;
+}
+
+.form-login label {
+    /* aparence */
+    font-size: 2rem;
+
+    /* element position */
+    margin-top: 2rem;
+
+    /* items position */
+    display: flex;
+    flex-direction: column;
+}
+.form-login input {
+    /* aparence */
+    width: 30rem;
+    height: 3rem;
+    outline: none;
+
+    /* items position */
+    padding: 0 1rem;
+}
+.boton{
+    /* aparence */
+    width: 10rem;
+    height: 3rem;
+    border-radius: 3px;
+    background-color: rgb(240, 128, 24);
+    color: #fff;
+    border: none;
+    outline: none;
+
+    /* effect */
+    cursor: pointer;
+
+    /*element position */
+    margin-top: 2rem;
+
+    /* items position */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.boton:hover{
+    background-color: rgb(202, 102, 9);
+    transition: 0.3s;
+}
